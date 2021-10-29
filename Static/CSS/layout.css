@@ -1,0 +1,655 @@
+/* layout.html */
+
+body {
+    background-color: rgba(105, 104, 104, 0.35);
+    font-family: 'Mulish',
+        sans-serif;
+    font-weight: bold;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+}
+
+header {
+    background-color: black;
+    color: white;
+    display: flex;
+    height: 80px;
+    border-radius: 5px;
+}
+
+#empresa {
+    margin-left: 0px;
+    width: 300px;
+}
+
+#empresa p {
+    font: engraverse-bold;
+    font-size: 50px;
+    text-align: left;
+    margin: auto;
+    padding-top: 3px;
+    text-indent: 1.5%;
+    text-shadow: 0 1px 0 #ccc,
+        0 2px 0 #c9c9c9,
+        0 3px 0 #bbb,
+        0 4px 0 #b9b9b9,
+        0 5px 0 #aaa,
+        0 6px 1px rgba(0, 0, 0, .1),
+        0 0 5px rgba(0, 0, 0, .1),
+        0 1px 3px rgba(0, 0, 0, .3),
+        0 3px 5px rgba(0, 0, 0, .2),
+        0 5px 10px rgba(0, 0, 0, .25),
+        0 10px 10px rgba(0, 0, 0, .2),
+        0 20px 20px rgba(0, 0, 0, .15);
+}
+
+footer {
+    background-color: black;
+    height: 80px;
+    border-radius: 5px;
+    margin-top: 15px;
+}
+
+div {
+    margin: 0;
+}
+
+/* layout1.html */
+
+svg {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+
+#sesion {
+    position: absolute;
+    top: 30px;
+    right: 80px;
+}
+
+a {
+    color: white;
+}
+
+/* (casi) Todos los archivos html */
+
+#usuario {
+    position: absolute;
+    top: 40px;
+    right: 80px;
+}
+
+#grupo-terminos{
+	grid-column: span 2;
+}
+
+#formulario__label {
+	display: block;
+	font-weight: 700;
+	padding: 10px;
+	cursor: pointer;
+}
+
+/* dashboard.html */
+
+.pantalla_dividida {
+    display: flex;
+    height: 500px;
+}
+
+#img {
+    margin-top: 30px;
+    height: 217px;
+}
+
+#le {
+    width: 300px;
+    height: 40px;
+    background-color: black;
+    color: white;
+    font: engraverse-bold;
+    font-size: 20px;
+}
+
+#estadisticas {
+    width: 232px;
+    height: 40px;
+    background-color: rgb(29, 124, 179);
+    color: white;
+    font: engraverse-bold;
+    font-size: 25px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#estadisticas p {
+    position: relative;
+    top: 7px;
+}
+
+#dashboard1 {
+    margin-left: 200px;
+}
+
+#dashboard2 {
+    position: absolute;
+    right: 200px;
+
+}
+
+#dashboard2 select {
+    background-color: black;
+    color: white;
+    font: engraverse-bold;
+    width: 232px;
+    height: 30px;
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.divisiones {
+    width: 230px;
+    height: 70px;
+    background-color: white;
+    border: 1px solid black;
+}
+
+.etiquetas {
+    height: 18px;
+}
+
+.etiquetas p {
+    margin: 0px;
+}
+
+.variables {
+    height: 54px;
+    font-size: 40px;
+    text-align: center;
+    
+}
+
+/* verinfo_admi.html */
+#verinfo_admi {
+    display: flex;
+}
+
+#verinfo_admi1 {
+    margin-right: 250px;
+}
+
+#verinfo_admi2 {
+    margin-left: 250px;
+}
+
+#verinfo_admib {
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.verinfo_admid {
+    width: 270px;
+    background-color: #CEC7C7;
+}
+
+#el {
+    margin-left: 10px;
+    margin-right: 40px;
+    width: 85px;
+    height: 35px;
+    background-color: red;
+    color: white;
+    border: 0px;
+    border-radius: 8px;
+}
+
+#ed {
+    margin-left: 50px;
+    margin-right: 10px;
+    height: 35px;
+    width: 70px;
+    background-color: red;
+    color: white;
+    border: 0px;
+    border-radius: 8px;
+}
+
+#verinfo_admi2 button {
+    background-color: black;
+    color: white;
+    border: 0px;
+    border-radius: 5px;
+    width: 150px;
+    height: 30px;
+}
+
+#b1 {
+    margin-bottom: 20px;
+    margin-top: 25px;
+    margin-left: 60px;
+}
+
+#b2 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 60px;
+}
+
+#w3review {
+    width: 270px;
+    background-color: #CEC7C7;
+    text-align: left;
+    border: 0px;
+    margin-bottom: 10px;
+}
+
+/* registrar_usuarios.html */
+
+#registrar_usuarios {
+    display: flex;
+}
+
+#registrar_usuarios1 {
+    margin-right: 300px;
+}
+
+#registrar_usuarios2 {
+    margin-left: 300px;
+}
+
+#registrar_usuariosb {
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.registrar_usuariosd input {
+    width: 270px;
+}
+
+#registrar_usuarios2 button {
+    position: relative;
+    right: 40px;
+    border-radius: 15px;
+    color: white;
+    background-color: rgba(105, 104, 104, 0.35);
+}
+
+#registrar_usuarios2 #est {
+    position: relative;
+    right: 28px;
+}
+
+#d1,
+#d2 {
+    width: 140px;
+}
+
+.registrar_usuariosd div {
+    width: 300px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#res {
+    width: 270px;
+}
+
+#registrar_usuarios0 p {
+    background-color: black;
+    color: white;
+    font: engraverse-bold;
+    font-size: 25px;
+    width: 500px;
+    height: 50px;
+    padding-top: 10px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+#atras_listarusuario {
+    margin-left:100px;
+    background-color:black;
+    color:white;
+	border-radius: 15px;
+	height: 30px;
+	line-height: 5px;
+	padding: 0 20px 0 20px;
+	transition: .3s ease all;
+}
+#reset input {
+    border: 0px;
+    border-radius: 20px;
+    background-color: red;
+    color: white;
+    width: 30px;
+    height: 30px;
+    margin-left: 500px;
+    margin-right: 40px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#search_ input {
+    width: 70px;
+    border: 0px;
+    height: 30px;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    margin-left: 40px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* editar_admi.html */
+
+#editar_admi {
+    display: flex;
+}
+
+#editar_admi1 {
+    margin-top: 0px;
+    margin-left: 250px;
+}
+#editar_admi1 input {
+    border-radius: 15px;
+    height:30px;
+}
+
+#editar_admi2 {
+    margin-left: 300px;
+}
+#editar_admi2 input {
+    border-radius: 15px;
+    height:30px
+}
+
+#editar_admib {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.editar_admid input {
+    width: 270px;
+}
+
+.editar_admid div {
+    width: 300px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#editar_admires {
+    width: 270px;
+}
+
+#editar_admid1,
+#editar_admid2 {
+    width: 140px;
+}
+
+#editar_admib1 {
+    margin-bottom: 10px;
+    margin-top: 25px;
+    margin-left: 60px;
+    background-color: black;
+    color: white;
+    border: 0px;
+    border-radius: 5px;
+    width: 150px;
+    height: 30px;
+}
+
+#editar_admib2 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 60px;
+    width: 150px;
+    background-color: black;
+    color: white;
+    border: 0px;
+    border-radius: 5px;
+    width: 150px;
+    height: 30px;
+}
+
+#editar_admiedit {
+    width: 200px;
+    border: 0px;
+    height: 30px;
+    background-color: black;
+    color: white;
+    border-radius: 15px;
+    
+}
+
+#editar_admigr {
+    width: 250px;
+    height: 30px;
+    background-color: red;
+    color: white;
+    font: engraverse-bold;
+    border: 0px;
+    border-radius: 5px;
+    margin-left: 10px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+/* listar_super.html */
+
+#cambiar_listarsuper {
+    display: none;
+}
+
+#buscar_listarsuper {
+    display: none;
+}
+
+#ListarUsuarios table th {
+    color: black;
+    background-color: rgba(0, 0, 0, 0.055);
+}
+
+#ListarUsuarios table td {
+    color: black;
+    padding: 1em;
+    background-color: rgba(0, 0, 0, 0.055)
+}
+
+#vi {
+    width: 100%;
+	background: rgb(161, 205, 246);
+	border: 3px solid transparent;
+	border-radius: 15px;
+	height: 35px;
+	line-height: 45px;
+	padding: 0 20px 0 10px;
+}
+
+#un{
+    background-color: white;
+    border: 3px solid transparent;
+	border-radius: 15px;
+	height: 35px;
+	padding: 0 20px 0 20px;
+    margin-left: 20px;
+
+}
+#un1{
+    background-color: red;
+    color:white;
+    border: 3px solid transparent;
+	border-radius: 15px;
+	height: 35px;
+	padding: 0 20px 0 20px;
+    margin-left: 20px;
+
+}
+
+#editarusuarioboton {
+    background-color: red;
+    color: white
+}
+
+#guardarcambiosrol {
+    background-color: red;
+    color: white
+}
+
+#totalregistros p {
+    margin-left: 5em;
+}
+
+/*Verinfo_us.html*/
+input {
+    border-radius: 8px;
+    height: 20px;
+}
+
+#con,
+#dep {
+    border-radius: 8px;
+    height: 20px;
+}
+
+/*Ver_ret.html*/
+#imagusuario p {
+    font-size:1.2em
+}
+
+#datosretro p{
+    color:rgb(0, 0, 0);
+    background-color:rgba(7, 7, 7, 0.068);
+    font-size:1.3em;
+    padding: 1em
+}
+
+#datosretro{
+    max-width:700px;
+}
+
+#puntajeretro{
+    width:150px;
+    background-color:red;
+    color:white;
+}
+
+#puntajeretro p{
+    text-align:center;
+ 
+}
+
+#datos1{
+    display: flex;
+    padding:2em;
+}
+
+/*editar_us.html*/
+
+#guardarcambioseditar_boton{
+    width: 100px;
+    height: 45px;
+    background-color: red;
+    color: white;
+    border-radius: 10px;
+}
+
+#datospersonales {
+    font-size:1.2em;
+    background-color:rgb(0, 0, 0);
+    color: white;
+    width:250px;
+    border-radius: 15px;
+    position:center;
+}
+
+#datos_de_usuario {
+    font-size:1.2em;
+    background-color:rgb(0, 0, 0);
+    color: white;
+    width:250px;
+    border-radius: 15px;
+    position:center;
+    padding: 0px 20px 0px 20px;
+}
+
+#guardarcambioseditar {
+    background-color: red;
+    color: white
+}
+
+#editar_usuario2{
+    display: flex;
+}
+
+
+#datos1 p{
+    color:rgb(0, 0, 0);
+    background-color:rgba(7, 7, 7, 0.068);
+    font-size:1.2em;
+    padding: 1em;
+}
+
+#datosusuario{
+    width:500px;
+    position: center;
+    
+}
+#datosusuario2{
+    width:500px
+}
+
+#datos1{
+    display: flex;
+    margin-left: 65px;
+}
+
+#guardarcambios_editar{
+    margin-right: 300px;
+    padding: 1em;
+    width: 100%;
+}
+
+#edit {
+    background-color:red;
+    color:white;
+	border-radius: 15px;
+	height: 30px;
+	line-height: 5px;
+	padding: 0 20px 0 20px;
+	transition: .3s ease all;
+}
+
+#vr{
+    background-color:red;
+    color:white;
+	border-radius: 15px;
+	height: 30px;
+	line-height: 5px;
+	padding: 0 20px 0 20px;
+	transition: .3s ease all;
+}
+.cuadro{
+    padding-left: 70px;
+}
+
+#cuadro2{
+    padding-left: 200px;
+}
+#atrás_verinfousuario {
+    margin-left:100px;
+    background-color:black;
+    color:white;
+	border-radius: 15px;
+	height: 30px;
+	line-height: 5px;
+	padding: 0 20px 0 20px;
+	transition: .3s ease all;
+}
+

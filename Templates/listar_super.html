@@ -1,0 +1,88 @@
+{% extends 'layout1.html' %}
+{% block perfil %}
+<div id="usuario">
+    <p>{{user}}</p>
+</div>
+{% endblock %}
+{% block cuerpo %}
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+    <ul class=flashes>
+    {% for message in messages %}
+      <li>{{ message }}</li>
+    {% endfor %}
+    </ul>
+  {% endif %}
+{% endwith %}
+<section>
+    <br>
+    <div>
+    <form action="/atras_ad" method="GET">
+        <input type="submit" name="" value="ATRÁS" id="atras_listarusuario"/>
+    </form>
+    </div>
+    <br>
+    <div>
+        <form action="/registrar_usuarios" method="GET" onSubmit="return enviar_usuario_nuevo()">
+            <input type="submit" name="usuario_nuevo" value="USUARIO NUEVO" id="un"/>
+        </form>
+    </div> <br> 
+    <div>
+            <form action="/editar_admi" method="GET">
+            <input type="submit" name="ver_informacion" value="EDITAR INFORMACIÓN" id="un"/>
+            </form>
+    </div>
+    <br>
+    <div>
+        <form action="/eliminar" method="GET">
+        <input type="submit" name="ver_informacion" value="ELIMINAR" id="un1"/>
+        </form>
+    </div>
+    
+    <br><br><br>
+<br><br>
+   <center> <div id="ListarUsuarios">
+        <table class="Listar">
+            <tr>
+                <th scope="row">NOMBRE</th>
+                <th>DOCUMENTO</th>
+                <th colspan="2">ROL</th>
+                </th>
+              </tr> 
+
+            <tr>
+             <td>{{nya}}</td>
+                <td>{{cedula}}</td>
+                <td>
+                    <form action="/listar_super" method="POST">
+                    <center><div id="buscar_usuario">
+                    <label>Buscar cédula <input type="text" id="BuscarUsuario" name="BuscarUsuario" value="{{cedula}}"></label>
+                    </div></center> <br>
+                    <input type="submit" name="buscar_super" value="BUSCAR" id="buscar_super"/>
+                    {% if cedula: %}
+                        <select name="Roles" id="roles">
+                        <option value="" selected disabled hidden>ASIGNAR ROL</option>
+                        <option value="gerencia">Empleado</option>
+                        <option value="Administrador">Administrador</option>
+                        </select>
+                        <input type="submit" name="cambiar" value="CAMBIAR" id="cambiar"/>
+                    {% endif %}
+                    </form>
+                </td>
+
+            </tr>
+    
+        </table>   
+    </div> </center>
+    <br> <br>
+    {% if cedula: %}
+    <center>
+    <form method="GET" action="/listar_super">
+    <input type="submit" name="refresh" value="REFRESCAR" id="refresh"/>
+    </form>
+    </center>
+    {% endif %}  
+    <br> <br> 
+
+
+{% endblock %}

@@ -1,0 +1,50 @@
+{% extends 'layout1.html' %}
+{% block perfil %}
+<div id="usuario">
+    <p>{{user}}</p>
+</div>
+{% endblock %}
+{% block cuerpo %}
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+    <ul class=flashes>
+    {% for message in messages %}
+      <li>{{ message }}</li>
+    {% endfor %}
+    </ul>
+  {% endif %}
+{% endwith %}
+    <!-- Aquí va el códigoo html -->
+    <br> <br><br>
+    <form action="/listar_super" method="GET">
+        <input type="submit" name="" value="ATRÁS" id="atras_listarusuario"/>
+    </form>
+    <br> <center><div id="buscar_usuario">
+        <form method="POST" action="/eliminar">
+        <label>Buscar cédula <input type="text" id="BuscarUsuario" name="BuscarUsuario" value="{{cedula}}"></label>
+        <input type="submit" name="buscar_super" value="BUSCAR" id="buscar_super"/>
+        </form>
+        </div></center> <br>
+    <form action="/eliminar_user" method="post">
+        {% if cedula: %}
+                <br><br>
+            <center> <div id="ListarUsuarios">
+                <table class="Listar">
+                    <tr>
+                        <th scope="row">NOMBRE</th>
+                        <th>DOCUMENTO</th>
+                    </tr> 
+
+                    <tr>
+                    <td>{{nya}}</td>
+                    <td>{{cedula}}</td>
+                    </tr>
+                </table>
+                <input type="submit" id="Eliminar" name="Eliminar" value="ELIMINAR">
+            </div> </center>
+            <br> <br>
+        {% endif %}
+    </form>
+
+    
+{% endblock %}

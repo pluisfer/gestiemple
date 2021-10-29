@@ -1,0 +1,155 @@
+{% extends 'layout1.html' %}
+{% block perfil %}
+<div id="usuario">
+    <p>{{user}}</p>
+</div>
+{% endblock %}
+{% block cuerpo %}
+<p>BIENVENIDO {{nombre}} {{apellido}}</p>    
+<main>
+    <form action="" class="formulario" id="formulario">
+        <!-- Grupo: Nombre -->
+        <div class="formulario__grupo" id="grupo__nombre" required="">
+            <label for="nombre" class="formulario__label">Nombre(s)</label>
+            <div class="formulario__grupo-input">
+                <input type="text" class="formulario__input" name="nombre" id="nombre" value={{nombre}} readonly>
+                <i class="formulario__validacion-estado fas fa-times-circle"></i>
+            </div>
+            <p class="formulario__input-error">Este campo solo admite letras</p>
+        </div>
+
+        <!-- Grupo: Apellido -->
+        <div class="formulario__grupo" id="grupo__apellido" required="">
+            <label for="apellido" class="formulario__label">Apellidos</label>
+            <div class="formulario__grupo-input">
+                <input type="text" class="formulario__input" name="apellido" id="apellido" value={{apellido}} readonly>
+                <i class="formulario__validacion-estado fas fa-times-circle"></i>
+            </div>
+            <p class="formulario__input-error">Este campo solo admite letras</p>
+        </div>
+
+        <!-- Grupo: Numero de id -->
+        <div class="formulario__grupo" id="grupo__cedula"required="">
+            <label for="cedula" class="formulario__label">Documento</label>
+            <div class="formulario__grupo-input">
+                <input type="number" class="formulario__input" name="cedula" id="cedula" value={{cedula}} readonly>
+                <i class="formulario__validacion-estado fas fa-times-circle"></i>
+            </div>
+            <p class="formulario__input-error">Este campo solo admite números</p>
+        </div>
+        <!-- Grupo: Correo Electronico -->
+        <div class="formulario__grupo" id="grupo__correo"required="">
+            <label for="correo" class="formulario__label">Correo Electrónico</label>
+            <div class="formulario__grupo-input">
+                <input type="email" class="formulario__input" name="correo" id="correo" value={{correo}} readonly>
+                <i class="formulario__validacion-estado fas fa-times-circle"></i>
+            </div>
+            <p class="formulario__input-error">Escriba una dirección de correo válida</p>
+        </div>
+        <!-- Grupo: Teléfono -->
+        <div class="formulario__grupo" id="grupo__telefono" >
+            <label for="telefono" class="formulario__label">Teléfono</label>
+            <div class="formulario__grupo-input">
+                <input type="number" class="formulario__input" name="telefono" id="telefono" value={{fijo}} readonly >
+                <i class="formulario__validacion-estado fas fa-times-circle"></i>
+            </div>
+            <p class="formulario__input-error">Este campo solo admite números</p>
+        </div>
+        <!-- Grupo: Dirección -->
+        <div class="formulario__grupo" id="grupo__direccion" >
+            <label for="direccion" class="formulario__label">Dirección</label>
+            <div class="formulario__grupo-input">
+                <input type="text" class="formulario__input" name="direccion" id="direccion" value={{direccion}} readonly>
+                <i class="formulario__validacion-estado fas fa-times-circle"></i>
+            </div>
+            <p class="formulario__input-error">Ingrese la dirección completa</p>
+        </div>
+
+        <!-- Grupo: Celular -->
+        <div class="formulario__grupo" id="grupo__celular">
+            <label for="celular" class="formulario__label">Celular</label>
+            <div class="formulario__grupo-input">
+                <input type="number" class="formulario__input" name="celular" id="celular" value={{cel}} readonly>
+                <i class="formulario__validacion-estado fas fa-times-circle"></i>
+            </div>
+            <p class="formulario__input-error">Este campo solo admite números</p>
+        </div>
+        
+        <!-- Grupo: Salario -->
+        <div class="formulario__grupo" id="grupo__salario"required="">
+            <label for="salario" class="formulario__label">Salario</label>
+            <div class="formulario__grupo-input">
+                <input type="text" class="formulario__input" name="salario" id="salario" value={{salario}} readonly>
+                <i class="formulario__validacion-estado fas fa-times-circle"></i>
+            </div>
+            <p class="formulario__input-error">Este campo solo admite números</p>
+        </div>
+        <!-- Grupo: Dependencia -->
+        <div class="formulario__grupo" id="grupo__dependencia" required="" placeholder="Dependencia">
+            <label for="dependencia" class="formulario__label">Dependencia</label>
+            <div class="formulario__grupo-input">
+                <input type="text" class="formulario__input" name="dependencia" id="dependencia" value={{dependencia}} readonly>
+                <i class="formulario__validacion-estado fas fa-times-circle"></i>
+            </div>
+        </div>
+        <!-- Grupo: Tipo de contrato -->
+        <div class="formulario__grupo" id="grupo__tipocontrato"required="" placeholder="Tipo de contrato">
+            <label for="tipocontrato" class="formulario__label">Tipo de contrato</label>
+            <div class="formulario__grupo-input">
+                <input type="text" class="formulario__input" name="contrato" id="contrato" value={{contrato}} readonly>
+                <i class="formulario__validacion-estado fas fa-times-circle"></i>
+            </div>
+        </div>
+
+        <!-- Grupo: Usuario -->
+        <div class="formulario__grupo" id="grupo__usuario1" required="">
+            <label for="usuario1" class="formulario__label">Usuario</label>
+            <div class="formulario__grupo-input">
+                <input type="text" class="formulario__input" name="usuario1" id="usuario1" value={{user}} readonly>
+                <i class="formulario__validacion-estado fas fa-times-circle"></i>
+            </div>
+            <p class="formulario__input-error">El usuario tiene que ser de 4 a 16 dígitos y solo puede contener numeros, letras y guion bajo.</p>
+        </div>
+
+        <!-- Grupo: Fecha de ingreso -->
+        <div class="formulario__grupo" id="grupo__fechaingreso" required="">
+            <label for="fechaingreso" class="formulario__label">Fecha de ingreso</label>
+            <div class="formulario__grupo-input">
+                <input type="text" class="formulario__input" name="fechaingreso" id="fechaingreso" value={{ingreso}} readonly>
+                <i class="formulario__validacion-estado fas fa-times-circle"></i>
+            </div>
+        </div>
+
+        <div class="formulario__grupo" id="grupo__fechaterm"required="">
+            <label for="fechaterm" class="formulario__label">Fecha de terminación de contrato</label>
+            <div class="formulario__grupo-input">
+                <input type="text" class="formulario__input" name="fechaterm" id="fechaterm" value={{terminacion}} readonly>
+                <i class="formulario__validacion-estado fas fa-times-circle"></i>
+            </div>
+        </div>
+        
+        <!-- Grupo: Cargo -->
+        <div class="formulario__grupo" id="grupo__cargo" required="">
+            <label for="nombre" class="formulario__label">Cargo</label>
+            <div class="formulario__grupo-input">
+                <input type="text" class="formulario__input" name="cargo" id="cargo" placeholder="Cargo" value={{cargos}} readonly>
+                <i class="formulario__validacion-estado fas fa-times-circle"></i>
+            </div>
+            <p class="formulario__input-error">Este campo solo admite letras</p>
+        </div>
+    </form>
+</main>
+<br>  
+<center><section>
+    <div>
+        <form action="/editar_us/" method="GET">
+            <input type="submit" name="editar_usuario" value="EDITAR" id="edit"/>
+        </form>
+    </div> <br> <br> 
+    <div>
+        <form action="/ver_ret" method="POST" onSubmit="return enviar_ver_ret()">
+            <input type="submit" name="ver_retro" value="VER RETROALIMENTACIÓN" id="vr"/>
+        </form>
+    </div>
+</section>
+{% endblock %}

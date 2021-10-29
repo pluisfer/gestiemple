@@ -1,0 +1,55 @@
+{% extends 'layout1.html' %} {% block perfil %}
+<div id="usuario">
+  <p>{{user}}</p>
+</div>
+{% endblock %} {% block cuerpo %}
+<section class="pantalla_dividida">
+  <div id="dashboard1">
+    <div id="img">
+      <img src={{ url_for('static', filename='Assets/staff.jfif') }} alt="">
+    </div>
+    <div>
+      <br>
+      <form action="/definicion_listar" method="POST">
+        <input type="submit" name="listar" value="GESTIONAR EMPLEADOS" id="le" />
+      </form>
+    </div>
+  </div>
+  <div id="dashboard2">
+    <div id="estadisticas">
+      <p>ESTADÍSTICAS</p>
+    </div>
+    <br>
+    <div>
+      <div class="divisiones">
+        <div class="etiquetas">
+          <center> <p>Administradores</p></center>
+        </div>
+  
+        <div class="variables">{{empleados}}</div>
+      </div>
+      <br>
+      <div class="divisiones">
+        <div class="etiquetas">
+         <center> <p>Empleados</p> </center>
+        </div>
+        <div class="variables">{{cargos}}</div>
+      </div>
+      <br>
+      <div class="divisiones">
+        <div class="etiquetas">
+          <center> <p>Contratos término fijo</p></center>
+        </div>
+        <div class="variables">{{establecidos}}</div>
+      </div>
+      <br>
+      <div class="divisiones">
+        <div class="etiquetas">
+          <center> <p>Contratos término indefinido</p></center>
+        </div>
+        <div class="variables">{{cumplidos}}</div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

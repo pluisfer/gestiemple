@@ -1,0 +1,167 @@
+{% extends 'layout1.html' %}
+{% block perfil %}
+<div id="usuario">
+    <p>{{user}}</p>
+</div>
+{% endblock %}
+{% block cuerpo %}
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+    <ul class=flashes>
+    {% for message in messages %}
+      <li>{{ message }}</li>
+    {% endfor %}
+    </ul>
+  {% endif %}
+{% endwith %}
+<section>
+<br> <br><br>
+<form action="/listar_super" method="GET">
+    <input type="submit" name="" value="ATRÁS" id="atras_listarusuario"/>
+</form>
+
+    <br>
+    <form action="/editar_admi" method="POST">
+    <div>
+        <center><div id="buscar_usuario">
+        <label>Buscar cédula <input type="text" id="BuscarUsuario" name="BuscarUsuario" value="{{cedula}}"></label>
+        <input type="submit" name="buscar_super" value="BUSCAR" id="buscar_super"/> </div>
+        </center>
+    </div>
+    </form>
+<br>
+    <form action="/editar" method="POST">
+        {% if cedula: %}
+            <div id="editar_admi">
+                <div id="editar_admi1">
+                    <div class="editar_admid">
+                        <div>
+                        <label class="" for="">Nombre (s):</label>
+                        </div>
+                        <input type="text" name="nombres" id="" value={{nombre}}>
+                    </div>
+                    <div class="editar_admid">
+                        <div>
+                        <label class="" for="">Número identificación:</label>
+                        </div>
+                        <input type="number" name="identificacion" id="" value={{cedula}}>
+                    </div>
+                    <div class="editar_admid">
+                        <div>
+                        <label class="" for="">Telefono fijo:</label>
+                        </div>
+                        <input type="tel" name="fijo" id="" value={{fijo}}>
+                    </div>
+                    <div class="editar_admid">
+                        <div>
+                        <label class="" for="">Celular:</label>
+                        </div>
+                        <input type="tel" name="celular" id="" value={{celular}}>
+                    </div>
+                    <div class="editar_admid">
+                        <div>
+                        <label class="" for="">Dependencia:</label>
+                        </div>
+                        <select name="dependencias" id="dep">
+                            <option value={{dependencias}}>Dependencias</option>
+                            <option value="Gerencia">Gerencia</option>
+                            <option value="Recursos Humanos">Recursos Humanos</option>
+                            <option value="Atencion al Cliente">Atención al Cliente</option>
+                            <option value="Contabilidad">Contabilidad</option>
+                        </select>
+                    </div>
+                    <div class="editar_admid">
+                        <div>
+                        <label class="" for="">Fecha de ingreso:</label>
+                        </div>
+                        <input type="date" name="ingreso" id="editar_admid1" value={{ingreso}}>
+                    </div>
+                    <div class="editar_admid">
+                        <div>
+                        <label class="" for="">Fecha de terminación de contrato:</label>
+                        </div>
+                        <input type="date" name="terminacion" id="editar_admid2" value={{term}}>
+                    </div>
+                    <div class="editar_admid">
+                        <div>
+                            <label class="" for="">Tipo de contrato:</label>
+                        </div>
+                        <select name="contrato" id="con">
+                            <option value={{contrato}}>Tipo de contrato:</option>
+                            <option value="Fijo">Término fijo</option>
+                            <option value="Indefinido">Término indefinido</option>
+                        </select>
+                    </div>
+                    <div class="editar_admid">
+                        <div>
+                        <label class="" for="">Cargo:</label>
+                        </div>
+                        <input type="text" name="cargo" id="" value={{cargo}}>
+                    </div>
+                </div>
+                <div id="editar_admi2">
+                    <div class="editar_admid">
+                        <div>
+                        <label class="" for="">Apellidos:</label>
+                        </div>
+                        <input type="text" name="apellidos" id="" value={{apellido}}>
+                    </div>
+                    <div class="editar_admid">
+                        <div>
+                        <label class="" for="">Correo personal:</label>
+                        </div>
+                        <input type="email" name="correo" id="" value={{correo}}>
+                    </div>
+                    <div class="editar_admid">
+                        <div>
+                        <label class="" for="">Dirección:</label>
+                        </div>
+                        <input type="text" name="direccion" id="" value={{direccion}}>
+                    </div>
+                    <div class="editar_admid">
+                        <div>
+                        <label class="" for="">Salario:</label>
+                        </div>
+                        <input type="text" name="salario" id="" value={{salario}}>
+                    </div>
+                    <div class="editar_admid">
+                        <div>
+                        <label class="" for="">Usuario:</label>
+                        </div>
+                        <input type="text" name="usuario2" id="" value={{usuario1}}>
+                    </div>
+                    <div class="editar_admid">
+                        <div>
+                        <label class="" for="">Contraseña:</label>
+                        </div>
+                        <input type="text" name="contraseña" id="">
+                    </div>
+                    <!--
+                    <div class="editar_admid">
+                        <button type="button" id="editar_admib1">Objetivos establecidos</button>
+                    </div>
+                    <div class="editar_admid">
+                        <button type="button" id="editar_admib2">Objetivos cumplidos</button>
+                    </div>-->
+                    <div class="editar_admid">
+                        <div>
+                        <label class="" for="">Reseña desempeño:</label>
+                        </div>
+                        <textarea id="editar_admires" name="reseña" rows="4" cols="50">{{reseña}}</textarea>
+                    </div>
+                    <div class="editar_admid">
+                        <div>
+                        <label class="" for="">Puntaje:</label>
+                        </div>
+                        <input type="text" name="puntaje" id="" value={{puntaje}}>
+                    </div>
+                </div>
+            </div>
+            <br>
+           <center> <div  id="editar_admib">
+                <input type="submit" value="GUARDAR CAMBIOS" id="editar_admiedit"/>
+            </div></center>
+        {% endif %}
+    </form>
+</section>
+{% endblock %}

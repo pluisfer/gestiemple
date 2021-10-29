@@ -1,0 +1,27 @@
+{% extends 'layout1.html' %}
+{% block perfil %}
+<div id="usuario">
+    <p>{{user}}</p>
+</div>
+{% endblock %}
+{% block cuerpo %}
+ <!-- Aquí va el código html -->
+ <br>
+ <form action="/atras_us" method="GET">
+    <input type="submit" name="" value="ATRÁS" id="atrás_verinfousuario"/>
+</form>
+ <br> <br>
+<center><div id="imagusuario"> 
+    <p> <strong>Nombre y Apellido:</strong> {{nya}} <br><strong> Identificación:</strong> {{cedula}} <br><strong> Dependencia:</strong> {{dependencia}} <br> <strong>Fecha de ingreso:</strong> {{ingreso}} </p>
+</div></center>
+
+    <center>
+        <div id=datosretro>
+            <p style="border: ridge #ffffff 3px;"> <br> DESEMPEÑO: <br> <br> {{desempeño}} <br> </p>
+        </div> 
+        <div id=puntajeretro>
+            <p style="border: ridge #ffffff 3px;"> PUNTAJE: <br> {{puntaje}} </p>
+        </div>
+    </center>
+
+{% endblock %}

@@ -1,83 +1,33 @@
-{% extends 'layout.html' %}
-
-
-
-
-
-{% block cuerpo %}
+{% extends 'layout.html' %} {% block cuerpo %}
 <section>
-    <form action="/login" method="POST" >
-        <div id="label1">
-            <label for="us">USUARIO</label>
-        </div>
-        <div>
-            <input type="text" name="usuario" id="us" required="">
-        </div>
-        <div id="label2">
-            <label for="ps">CONTRASEÑA</label>
-        </div>
-        <div>
-            <input type="password" name="contraseña" id="ps" required="">
-        </div>
-        <div id="grupo__terminos">
-            <label id="formulario1__label">
-                <input class="formulario1__checkbox" type="checkbox" name="terminos" id="terminos" required="">
-                Acepto los Términos y Condiciones
-            </label>
-        </div>
-        <div id="ingresar">
-            <input type="submit" value="INGRESAR" id="ev"/>
-        </div>
-    </form>
+  <form action="/login" method="POST">
+    <div class="divi" id="label1">
+      <label for="us">USUARIO</label>
+    </div>
+    <div class="divi">
+      <input type="text" name="usuario" id="us" required="" />
+    </div>
+    <div class="divi" id="label2">
+      <label for="ps">CONTRASEÑA</label>
+    </div>
+    <div class="divi">
+      <input type="password" name="contraseña" id="ps" required="" />
+    </div>
+    <div class="divi" id="grupo__terminos">
+      <label id="formulario1__label">
+        <input
+          class="formulario1__checkbox"
+          type="checkbox"
+          name="terminos"
+          id="terminos"
+          required=""
+        />
+        Acepto los Términos y Condiciones
+      </label>
+    </div>
+    <div class="divi" id="ingresar">
+      <input type="submit" value="INGRESAR" id="ev" />
+    </div>
+  </form>
 </section>
-<style type="text/css">
-    div{
-        width: 880px;
-        text-align: center;
-        margin: auto;
-    }
-    section{
-        height: 500px;
-    }
-    #label1{
-        padding: 120px 0px 10px 0px;
-    }
-    #label2{
-        padding: 50px 0px 10px 0px;
-    }
-    #ingresar{
-        padding: 40px 0px 0px 0px;
-    }
-    #us{
-        width: 230px;
-        border-radius: 8px;
-        height:30px;
-    }
-    #ps{
-        width: 230px;        
-        border-radius: 8px;
-         height:30px;
-    }
-    #ev{
-        background-color: green;
-        border-color: green;
-        border-radius: 5px;
-        height:30px;
-    }
-</style>
-<script type="text/javascript">
-    function validar_formulario1() {
-        let sw = true;
-        let contraseña = document.getElementById("ps").value;
-        if (contraseña==null || contraseña.length<8) {
-            alert("¡La contraseña debe tener al menos 8 caracteres!");
-            sw = false;
-            document.getElementById("ps").focus();
-        }
-        return sw
-    }
-</script>
-{% endblock %}
-{% block scripts %}
-<script src={{ url_for('static', filename='JS/nombre.js') }}></script>
-{% endblock %}
+{% endblock %} {

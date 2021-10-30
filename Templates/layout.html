@@ -12,8 +12,10 @@
       href="https://fonts.googleapis.com/css2?family=Mulish:wght@300&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href={{ url_for('static', filename='CSS/layout.css')
-    }}> <link rel="stylesheet" href={{ url_for('static',
+    <link rel="stylesheet" href={{ url_for('static',
+    filename='CSS/layout.css')}}> <link rel="stylesheet" href={{
+    url_for('static', filename='CSS/inicio_sesion.css') }}> <link
+    rel="stylesheet" href={{ url_for('static',
     filename='CSS/estiloformulario.css') }}> {% endblock %}
     <title>{% block title %}{% endblock %}-Document</title>
     {% endblock %}
@@ -27,12 +29,16 @@
     </header>
     {% block cuerpo %} {% endblock %}
     <footer>{% block footer %} {% endblock %}</footer>
+    {% block scripts %}
+    <script
+      src="https://kit.fontawesome.com/2c36e9b7b1.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="{{ url_for('static', filename='js/formulario.js')}}"
+      type="text/javascript"
+      language="javascript"
+    ></script>
+    {% endblock %}
   </body>
-  {% block scripts %}
-  <script src="{{ url_for('static', filename='js/formulario.js') }}"></script>
-  <script
-    src="https://kit.fontawesome.com/2c36e9b7b1.js"
-    crossorigin="anonymous"
-  ></script>
-  {% endblock %}
 </html>

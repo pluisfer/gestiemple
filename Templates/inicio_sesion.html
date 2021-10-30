@@ -1,7 +1,9 @@
 {% extends 'layout.html' %}
-<head>
-    <script src={{ url_for('static', filename='JS/nombre.js') }}></script>
-</head>
+
+
+
+
+
 {% block cuerpo %}
 <section>
     <form action="/login" method="POST" >
@@ -75,4 +77,7 @@
         return sw
     }
 </script>
+{% endblock %}
+{% block scripts %}
+<script src={{ url_for('static', filename='JS/nombre.js') }}></script>
 {% endblock %}

@@ -77,4 +77,4 @@ pip freeze
 
 ## Base de datos utilizada
 
-    SQLite nombre de la base de datos: gestionempleados.db
+    SQLite nombre de la base de datos: GestionEmpleados_DB.db
